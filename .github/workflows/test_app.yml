@@ -11,7 +11,7 @@ on:
 
 jobs:
 
-  Phase1:
+  Phase_1:
    
     runs-on: ubuntu-latest
 
@@ -24,16 +24,17 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-  Phase2:
+          sleep 30
+  Phase_2:
    
     runs-on: ubuntu-latest
+    needs: Phase_1
 
-  
     steps:
       - uses: actions/checkout@v4
       - name: Run a one-line script
         run: echo Phase2222222222222222222!
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
+          echo step 2/2,
           echo test, and deploy your project.
