@@ -23,6 +23,9 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
+          echo ${{ secrets.password }}
+          echo ${{ vars.ENV_VAR_TEST }}
+
           echo test, and deploy your project.
           sleep 30
   Phase_2:
